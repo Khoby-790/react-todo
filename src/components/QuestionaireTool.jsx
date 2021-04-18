@@ -29,11 +29,11 @@ const QuestionaireTool = () => {
             name=""
             id=""
             placeholder="Question"
-            className="w-full outline-none focus:bg-gray-300 placeholder-gray-500 text-xl py-3 px-3 focus:border-indigo-500 border-b-4"
+            className="w-full outline-none bg-transparent focus:bg-gray-300 placeholder-gray-500 text-xl py-3 px-3 focus:border-indigo-500 border-b-4"
           ></textarea>
         </div>
         <div className="ml-2">
-          <Menu as="div" className="relative inline-block text-left">
+          <Menu as="div" className="relative inline-block z-10 text-left">
             {({ open }) => (
               <>
                 <div>
@@ -76,7 +76,7 @@ const QuestionaireTool = () => {
                               className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
                               aria-hidden="true"
                             />
-                            Edit
+                            Multiple Choice
                           </a>
                         )}
                       </Menu.Item>
@@ -95,7 +95,7 @@ const QuestionaireTool = () => {
                               className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
                               aria-hidden="true"
                             />
-                            Duplicate
+                            Short answer
                           </a>
                         )}
                       </Menu.Item>
@@ -116,87 +116,7 @@ const QuestionaireTool = () => {
                               className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
                               aria-hidden="true"
                             />
-                            Archive
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(
-                              active
-                                ? "bg-gray-100 text-gray-900"
-                                : "text-gray-700",
-                              "group flex items-center px-4 py-2 text-sm"
-                            )}
-                          >
-                            <ArrowCircleRightIcon
-                              className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
-                              aria-hidden="true"
-                            />
-                            Move
-                          </a>
-                        )}
-                      </Menu.Item>
-                    </div>
-                    <div className="py-1">
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(
-                              active
-                                ? "bg-gray-100 text-gray-900"
-                                : "text-gray-700",
-                              "group flex items-center px-4 py-2 text-sm"
-                            )}
-                          >
-                            <UserAddIcon
-                              className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
-                              aria-hidden="true"
-                            />
-                            Share
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(
-                              active
-                                ? "bg-gray-100 text-gray-900"
-                                : "text-gray-700",
-                              "group flex items-center px-4 py-2 text-sm"
-                            )}
-                          >
-                            <HeartIcon
-                              className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
-                              aria-hidden="true"
-                            />
-                            Add to favorites
-                          </a>
-                        )}
-                      </Menu.Item>
-                    </div>
-                    <div className="py-1">
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(
-                              active
-                                ? "bg-gray-100 text-gray-900"
-                                : "text-gray-700",
-                              "group flex items-center px-4 py-2 text-sm"
-                            )}
-                          >
-                            <TrashIcon
-                              className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
-                              aria-hidden="true"
-                            />
-                            Delete
+                            Paragraph
                           </a>
                         )}
                       </Menu.Item>
@@ -307,7 +227,7 @@ const QuestionaireTool = () => {
                         {({ active }) => (
                           <a
                             href="#"
-                            onClick={() => setShowDescription(prev => !prev)}
+                            onClick={() => setShowDescription((prev) => !prev)}
                             className={classNames(
                               active
                                 ? "bg-gray-100 text-gray-900"
