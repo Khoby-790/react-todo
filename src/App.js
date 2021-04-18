@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route } from "react-router-dom";
+import Welcome from "./pages/Welcome";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="bg-white py-2 flex justify-between items-center">
+        <div className="w-1/4">
+          <span>Forms</span>
+        </div>
+        <div className="flex-1">
+          <div className="bg-gray-300 w-full flex  rounded-md overflow-hidden">
+            <div></div>
+            <input type="text" />
+          </div>
+        </div>
+        <div className="w-1/4"></div>
+      </div>
+      <Route path="/" component={Welcome} />
+    </BrowserRouter>
   );
 }
 
