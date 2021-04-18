@@ -28,6 +28,12 @@ const QuestionaireTool = () => {
     setOptions(_options);
   };
 
+  const editOption = (value, id) => {
+    const _options = [...options];
+    _options[id] = value;
+    setOptions(_options);
+  };
+
   return (
     <div className="w-full lg:w-2/3 border-l-8 border-indigo-500 pt-5 px-2 shadow-lg bg-gray-50 my-3 rounded-lg ">
       {/* Question and Question Type section */}
@@ -166,7 +172,7 @@ const QuestionaireTool = () => {
                 <input
                   type="text"
                   value={option}
-                  onChange={() => {}}
+                  onChange={(e) => editOption(e.target.value, optionId)}
                   className="w-full py-2 outline-none bg-transparent border-b"
                 />
                 <span
