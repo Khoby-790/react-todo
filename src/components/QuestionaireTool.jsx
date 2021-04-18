@@ -23,7 +23,7 @@ const QuestionaireTool = () => {
   return (
     <div className="w-full lg:w-2/3 border-l-8 border-indigo-500 pt-5 px-2 shadow-lg bg-gray-50 my-3 rounded-lg ">
       {/* Question and Question Type section */}
-      <div className="flex px-4">
+      <div className="flex">
         <div className="flex-1">
           <textarea
             name=""
@@ -213,8 +213,8 @@ const QuestionaireTool = () => {
         <input
           rows={4}
           type="text"
-          placeholder="Form Description"
-          className="text-gray-500 w-full px-3 outline-none py-2"
+          placeholder="Description"
+          className="text-gray-500 bg-transparent w-full px-3 border-b outline-none py-2"
         />
       )}
       {/* Answers Section */}
@@ -307,7 +307,7 @@ const QuestionaireTool = () => {
                         {({ active }) => (
                           <a
                             href="#"
-                            onClick={() => setShowDescription(true)}
+                            onClick={() => setShowDescription(prev => !prev)}
                             className={classNames(
                               active
                                 ? "bg-gray-100 text-gray-900"
