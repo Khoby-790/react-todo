@@ -19,13 +19,13 @@ function classNames(...classes) {
 const QuestionaireTool = () => {
   return (
     <div className="w-full lg:w-2/3 border-l-8 border-indigo-500 py-2 my-3 rounded-lg">
-      <div className="flex">
+      <div className="flex px-4">
         <div className="flex-1">
-            <textarea name="" id="" cols="30" rows="10">
-                
+            <textarea name="" id="" className="w-full outline-none focus:bg-gray-300 focus:border-indigo-500 border-b-4">
+
             </textarea>
         </div>
-        <div className="">
+        <div className="ml-2">
           <Menu as="div" className="relative inline-block text-left">
             {({ open }) => (
               <>
