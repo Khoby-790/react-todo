@@ -1,6 +1,7 @@
 import { BrowserRouter, Route } from "react-router-dom";
 import { Navbar } from "./components";
 import Welcome from "./pages/Welcome";
+import Builder from "./pages/Builder";
 
 function App() {
   return (
@@ -8,7 +9,8 @@ function App() {
       <div className="h-screen overflow-hidden">
         <Navbar />
         <div className="h-full max-h-full flex-1  overflow-y-scroll">
-          <Route path="/" component={Welcome} />
+          <Route path="/" exact component={Welcome} />
+          <Route path="/builder" exact component={Builder} />
         </div>
       </div>
     </BrowserRouter>

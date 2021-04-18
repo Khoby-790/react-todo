@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Welcome = () => {
   return (
@@ -33,7 +34,7 @@ const Welcome = () => {
         </div>
 
         <div className="grid gap-3 grid-cols-6">
-          <div className="cursor-pointer ">
+          <Link to="/builder" className="cursor-pointer ">
             <div className="bg-white flex items-center h-40 mb-3 justify-center flex-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +52,7 @@ const Welcome = () => {
               </svg>
             </div>
             <span>Blank</span>
-          </div>
+          </Link>
         </div>
       </div>
     </div>
