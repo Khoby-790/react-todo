@@ -1,5 +1,7 @@
 import React from "react";
 import {GiHamburgerMenu} from 'react-icons/gi'
+import {BsSearch} from 'react-icons/bs';
+
 
 const Navbar = () => {
   return (
@@ -11,9 +13,11 @@ const Navbar = () => {
         <span className="text-xl">Form Builder</span>
       </div>
       <div className="flex-1">
-        <div className="bg-gray-300 w-full flex  rounded-md overflow-hidden">
-          <div></div>
-          <input type="text" />
+        <div className="bg-gray-300 w-full flex  py-2 px-4  rounded-md overflow-hidden">
+          <div>
+              <BsSearch size={30} />
+          </div>
+          <input className="bg-gray-300" type="text" />
         </div>
       </div>
       <div className="w-1/4"></div>
