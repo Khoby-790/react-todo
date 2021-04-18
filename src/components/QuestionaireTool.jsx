@@ -18,6 +18,8 @@ const QuestionaireTool = () => {
   const [showDescription, setShowDescription] = useState(false);
   const [answerType, setAnswerType] = useState("Multiple Choice");
   const [options, setOptions] = useState(["Option 1"]);
+  const [question, setQuestion] = useState("");
+  const [description, setDescription] = useState("");
 
   const removeOption = (id) => {
     const _options = [...options];
@@ -34,6 +36,8 @@ const QuestionaireTool = () => {
           <textarea
             name=""
             id=""
+            value={question}
+            onChange={(e) => setQuestion(e.target.value)}
             placeholder="Question"
             className="w-full outline-none bg-transparent focus:bg-gray-300 placeholder-gray-500 text-xl py-3 px-3 focus:border-indigo-500 border-b-4"
           ></textarea>
@@ -139,6 +143,8 @@ const QuestionaireTool = () => {
         <input
           rows={4}
           type="text"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
           placeholder="Description"
           className="text-gray-500 bg-transparent w-full px-3 border-b outline-none py-2"
         />
