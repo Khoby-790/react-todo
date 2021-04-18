@@ -4,9 +4,11 @@ import Welcome from "./pages/Welcome";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Route path="/" component={Welcome} />
+    <BrowserRouter >
+      <div className="h-screen max-h-screen">
+        <Navbar />
+        <Route path="/" component={Welcome} />
+      </div>
     </BrowserRouter>
   );
 }
