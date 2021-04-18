@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { Fragment } from "react";
-import { Menu, Transition } from "@headlessui/react";
+import React, { Fragment, useState } from "react";
+import { Menu, Transition, Switch } from "@headlessui/react";
 import {
   ArchiveIcon,
   ArrowCircleRightIcon,
@@ -17,6 +17,7 @@ function classNames(...classes) {
 }
 
 const QuestionaireTool = () => {
+  const [enabled, setEnabled] = useState(false);
   return (
     <div className="w-full lg:w-2/3 border-l-8 border-indigo-500 pt-5 px-2 shadow-lg bg-gray-50 my-3 rounded-lg ">
       {/* Question and Question Type section */}
@@ -205,6 +206,7 @@ const QuestionaireTool = () => {
           </Menu>
         </div>
       </div>
+      {/* Description Section */}
       {/* Answers Section */}
       <div className="p-3"></div>
 
@@ -241,34 +243,30 @@ const QuestionaireTool = () => {
           </svg>
         </div>
         <div className="flex">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8 mr-3 text-gray-500 cursor-pointer"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8 text-gray-500 cursor-pointer"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-            />
-          </svg>
+          <Switch.Group as="div" className="flex items-center">
+            <Switch.Label as="span" className="ml-3">
+              <span className="text-sm font-medium mr-2 text-gray-900">
+                Required
+              </span>
+            </Switch.Label>
+            <Switch
+              checked={enabled}
+              onChange={setEnabled}
+              className={classNames(
+                enabled ? "bg-indigo-600" : "bg-gray-200",
+                "relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              )}
+            >
+              <span className="sr-only">Use setting</span>
+              <span
+                aria-hidden="true"
+                className={classNames(
+                  enabled ? "translate-x-5" : "translate-x-0",
+                  "pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200"
+                )}
+              />
+            </Switch>
+          </Switch.Group>
         </div>
       </div>
     </div>
