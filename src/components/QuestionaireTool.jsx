@@ -22,7 +22,8 @@ const QuestionaireTool = () => {
   const removeOption = (id) => {
     const _options = options;
     const index = _options.indexOf(id);
-    alert("Hello", id);
+    console.log(index);
+    // alert("Hello", id);
     if (index > -1) {
       _options.splice(index, 1);
       setOptions(_options);
