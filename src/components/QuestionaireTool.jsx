@@ -16,6 +16,7 @@ function classNames(...classes) {
 const QuestionaireTool = () => {
   const [enabled, setEnabled] = useState(false);
   const [showDescription, setShowDescription] = useState(false);
+  const [answerType, setAnswerType] = useState("Multiple Choice ");
   return (
     <div className="w-full lg:w-2/3 border-l-8 border-indigo-500 pt-5 px-2 shadow-lg bg-gray-50 my-3 rounded-lg ">
       {/* Question and Question Type section */}
@@ -34,7 +35,7 @@ const QuestionaireTool = () => {
               <>
                 <div>
                   <Menu.Button className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500">
-                    Options
+                    {answerType}
                     <ChevronDownIcon
                       className="-mr-1 ml-2 h-5 w-5"
                       aria-hidden="true"
@@ -59,8 +60,9 @@ const QuestionaireTool = () => {
                     <div className="py-1">
                       <Menu.Item>
                         {({ active }) => (
-                          <a
+                          <span
                             href="#"
+                            onClick={() => setAnswerType("Multiple Choice")}
                             className={classNames(
                               active
                                 ? "bg-gray-100 text-gray-900"
@@ -73,13 +75,14 @@ const QuestionaireTool = () => {
                               aria-hidden="true"
                             />
                             Multiple Choice
-                          </a>
+                          </span>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
                           <a
                             href="#"
+                            onClick={() => setAnswerType("Short answer")}
                             className={classNames(
                               active
                                 ? "bg-gray-100 text-gray-900"
@@ -101,6 +104,7 @@ const QuestionaireTool = () => {
                         {({ active }) => (
                           <a
                             href="#"
+                            onClick={() => setAnswerType("Paragraph")}
                             className={classNames(
                               active
                                 ? "bg-gray-100 text-gray-900"
@@ -134,12 +138,7 @@ const QuestionaireTool = () => {
         />
       )}
       {/* Answers Section */}
-      <div className="p-3">
-
-        {}
-
-
-      </div>
+      <div className="p-3">{}</div>
 
       {/* Settings Section */}
       <div className="border-t flex justify-end py-4 px-4 border-gray-300">
