@@ -18,7 +18,7 @@ function classNames(...classes) {
 
 const QuestionaireTool = () => {
   return (
-    <div className="w-full lg:w-2/3 border-l-8 border-indigo-500 py-2 shadow-lg bg-gray-50 my-3 rounded-lg">
+    <div className="w-full lg:w-2/3 border-l-8 border-indigo-500 py-5 px-2 shadow-lg bg-gray-50 my-3 rounded-lg ">
       {/* Question and Question Type section */}
       <div className="flex px-4">
         <div className="flex-1">
@@ -207,6 +207,11 @@ const QuestionaireTool = () => {
       </div>
       {/* Answers Section */}
       <div className="p-3"></div>
+
+      {/* Settings Section */}
+      <div className="border-t flex justify-end border-gray-300">
+        <div className="flex"></div>
+      </div>
     </div>
   );
 };
