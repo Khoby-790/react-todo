@@ -22,12 +22,10 @@ const QuestionaireTool = () => {
   const removeOption = (id) => {
     const _options = options;
     const index = _options.indexOf(id);
-    console.log(index);
-    // alert("Hello", id);
-    if (index > -1) {
-      _options.splice(index, 1);
-      setOptions(_options);
-    }
+    _options.splice(id, 1);
+    console.log(_options);
+    setOptions(_options);
+
   };
 
   return (
