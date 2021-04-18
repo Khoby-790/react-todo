@@ -7,9 +7,9 @@ const Welcome = () => {
         <div className="flex justify-between">
           <span>Start a new form</span>
           <div className="flex items-center">
-            <button className="outline-none focus:outline-none border border-gray-500 px-3 py-2 hover:bg-gray-600 hover:text-white">Temlate gallery</button>
+            <button className="outline-none focus:outline-none transition-all duration-100 transform rounded border border-gray-500 px-3 py-2 hover:bg-gray-600 hover:text-white">Temlate gallery</button>
 
-            <button>
+            <button className="ml-4 px-3 py-2 rounded-full outline-none  hover:bg-gray-500 focus:bg-gray-500">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 text-gray-500 w-6"
