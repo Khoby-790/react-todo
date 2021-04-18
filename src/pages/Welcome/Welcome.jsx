@@ -3,13 +3,13 @@ import React from "react";
 const Welcome = () => {
   return (
     <div className="flex-1 h-full flex flex-col">
-      <div className="bg-gray-300 h-64 py-5 flex flex-col px-32">
+      <div className="bg-gray-200 h-64 py-5 flex flex-col px-32">
         <div className="flex justify-between">
           <span>Start a new form</span>
           <div className="flex items-center">
             <button className="outline-none focus:outline-none transition-all duration-100 transform rounded border border-gray-500 px-3 py-2 hover:bg-gray-600 hover:text-white">Temlate gallery</button>
 
-            <button className="transition-all duration-100 transform ml-4 px-3 py-2 group rounded outline-none hover:text-white hover:bg-gray-500 focus:bg-gray-500">
+            <button className="transition-all duration-100 transform ml-4 px-3 py-2 group rounded outline-none hover:text-white focus:outline-none hover:bg-gray-500">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 text-gray-500 group-hover:text-gray-100 w-6"
