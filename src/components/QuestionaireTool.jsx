@@ -145,7 +145,11 @@ const QuestionaireTool = () => {
         )}
 
         {answerType === "Multiple Choice" && (
-          <div className="border-b">{answerType}</div>
+          <div>
+              <div className="w-full">
+                  <input type="text" className="w-full outline-none border-b"/>
+              </div>
+          </div>
         )}
       </div>
 
