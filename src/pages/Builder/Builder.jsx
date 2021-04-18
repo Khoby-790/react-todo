@@ -2,8 +2,8 @@ import React from 'react'
 
 const Builder = () => {
     return (
-        <div>
-            
+        <div className="px-64 py-5">
+            Hello
         </div>
     )
 }
