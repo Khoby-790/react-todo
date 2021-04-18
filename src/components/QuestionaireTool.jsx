@@ -18,6 +18,17 @@ const QuestionaireTool = () => {
   const [showDescription, setShowDescription] = useState(false);
   const [answerType, setAnswerType] = useState("Multiple Choice");
   const [options, setOptions] = useState(["Option 1"]);
+
+  const removeOption = (id) => {
+    const _options = options;
+    const index = _options.indexOf(id);
+    if (index > -1) {
+        alert("Hello");
+      _options.splice(index, 1);
+      setOptions(_options);
+    }
+  };
+
   return (
     <div className="w-full lg:w-2/3 border-l-8 border-indigo-500 pt-5 px-2 shadow-lg bg-gray-50 my-3 rounded-lg ">
       {/* Question and Question Type section */}
@@ -154,10 +165,22 @@ const QuestionaireTool = () => {
                   value={option}
                   className="w-full py-2 outline-none bg-transparent border-b"
                 />
-                <span className="text-red-600 cursor-pointer">Remove</span>
+                <span
+                  onClick={() => removeOption(optionId)}
+                  className="text-red-600 cursor-pointer"
+                >
+                  Remove
+                </span>
               </div>
             ))}
-            <button onClick={() => setOptions(prev => [...prev, `Option ${options.length + 1}`])} className="my-3 px-4 py-2 rounded-md w-auto outline-none focus:outline-none bg-indigo-600 text-white">Add option</button>
+            <button
+              onClick={() =>
+                setOptions((prev) => [...prev, `Option ${options.length + 1}`])
+              }
+              className="my-3 px-4 py-2 rounded-md w-auto outline-none focus:outline-none bg-indigo-600 text-white"
+            >
+              Add option
+            </button>
           </div>
         )}
       </div>
