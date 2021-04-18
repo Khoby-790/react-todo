@@ -61,7 +61,7 @@ const QuestionaireTool = () => {
                       <Menu.Item>
                         {({ active }) => (
                           <span
-                            href="#"
+                            
                             onClick={() => setAnswerType("Multiple Choice")}
                             className={classNames(
                               active
@@ -80,8 +80,8 @@ const QuestionaireTool = () => {
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <span
+                            
                             onClick={() => setAnswerType("Short answer")}
                             className={classNames(
                               active
@@ -95,15 +95,15 @@ const QuestionaireTool = () => {
                               aria-hidden="true"
                             />
                             Short answer
-                          </a>
+                          </span>
                         )}
                       </Menu.Item>
                     </div>
                     <div className="py-1">
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <span
+                            
                             onClick={() => setAnswerType("Paragraph")}
                             className={classNames(
                               active
@@ -117,7 +117,7 @@ const QuestionaireTool = () => {
                               aria-hidden="true"
                             />
                             Paragraph
-                          </a>
+                          </span>
                         )}
                       </Menu.Item>
                     </div>
@@ -226,7 +226,7 @@ const QuestionaireTool = () => {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
+                            
                             onClick={() => setShowDescription((prev) => !prev)}
                             className={classNames(
                               active
@@ -242,7 +242,7 @@ const QuestionaireTool = () => {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
+                            
                             className={classNames(
                               active
                                 ? "bg-gray-100 text-gray-900"
@@ -257,7 +257,7 @@ const QuestionaireTool = () => {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
+                            
                             className={classNames(
                               active
                                 ? "bg-gray-100 text-gray-900"
