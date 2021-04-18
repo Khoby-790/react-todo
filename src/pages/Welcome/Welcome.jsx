@@ -33,7 +33,7 @@ const Welcome = () => {
         </div>
 
         <div className="grid gap-3 grid-cols-6">
-          <div className="flex items-center justify-center bg-white">
+          <div className="flex items-center h-40 justify-center cursor-pointer bg-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-16 w-16"
@@ -49,6 +49,7 @@ const Welcome = () => {
               />
             </svg>
           </div>
+          
         </div>
       </div>
     </div>
