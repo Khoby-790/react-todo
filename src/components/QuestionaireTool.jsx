@@ -3,13 +3,9 @@ import React, { Fragment, useState } from "react";
 import { Menu, Transition, Switch } from "@headlessui/react";
 import {
   ArchiveIcon,
-  ArrowCircleRightIcon,
   ChevronDownIcon,
   DuplicateIcon,
-  HeartIcon,
   PencilAltIcon,
-  TrashIcon,
-  UserAddIcon,
   DotsVerticalIcon,
 } from "@heroicons/react/solid";
 
@@ -138,7 +134,12 @@ const QuestionaireTool = () => {
         />
       )}
       {/* Answers Section */}
-      <div className="p-3"></div>
+      <div className="p-3">
+
+        {}
+
+
+      </div>
 
       {/* Settings Section */}
       <div className="border-t flex justify-end py-4 px-4 border-gray-300">
