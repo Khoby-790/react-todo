@@ -5,9 +5,11 @@ import Welcome from "./pages/Welcome";
 function App() {
   return (
     <BrowserRouter >
-      <div className="h-full max-h-screen bg-red-200">
+      <div className="h-full max-h-screen flex flex-col bg-red-200">
         <Navbar />
-        <Route path="/" component={Welcome} />
+        <div className="h-full bg-red-200">
+          <Route path="/" component={Welcome} />
+        </div>
       </div>
     </BrowserRouter>
   );
