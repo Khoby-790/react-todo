@@ -20,12 +20,10 @@ const QuestionaireTool = () => {
   const [options, setOptions] = useState(["Option 1"]);
 
   const removeOption = (id) => {
-    const _options = options;
-    const index = _options.indexOf(id);
+    const _options = [...options];
     _options.splice(id, 1);
     console.log(_options);
     setOptions(_options);
-
   };
 
   return (
