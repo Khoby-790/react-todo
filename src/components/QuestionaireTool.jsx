@@ -19,6 +19,7 @@ function classNames(...classes) {
 
 const QuestionaireTool = () => {
   const [enabled, setEnabled] = useState(false);
+  const [showDescription, setShowDescription] = useState(false);
   return (
     <div className="w-full lg:w-2/3 border-l-8 border-indigo-500 pt-5 px-2 shadow-lg bg-gray-50 my-3 rounded-lg ">
       {/* Question and Question Type section */}
@@ -299,6 +300,7 @@ const QuestionaireTool = () => {
                         {({ active }) => (
                           <a
                             href="#"
+                            onClick={() => showDescription(true)}
                             className={classNames(
                               active
                                 ? "bg-gray-100 text-gray-900"
@@ -306,7 +308,7 @@ const QuestionaireTool = () => {
                               "block px-4 py-2 text-sm"
                             )}
                           >
-                            Account settings
+                            Description
                           </a>
                         )}
                       </Menu.Item>
