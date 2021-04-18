@@ -20,7 +20,11 @@ const QuestionaireTool = () => {
   return (
     <div className="w-full lg:w-2/3 border-l-8 border-indigo-500 py-2 my-3 rounded-lg">
       <div className="flex">
-        <div className="flex-1"></div>
+        <div className="flex-1">
+            <textarea name="" id="" cols="30" rows="10">
+                
+            </textarea>
+        </div>
         <div className="">
           <Menu as="div" className="relative inline-block text-left">
             {({ open }) => (
