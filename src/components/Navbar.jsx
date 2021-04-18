@@ -3,7 +3,7 @@ import {GiHamburgerMenu} from 'react-icons/gi'
 
 const Navbar = () => {
   return (
-    <div className="bg-white py-5 flex justify-between items-center">
+    <div className="bg-white py-5 flex justify-between items-center shadow-md">
       <div className="w-1/4 flex px-4">
         <span className="mr-5">
           <GiHamburgerMenu size={30} />
