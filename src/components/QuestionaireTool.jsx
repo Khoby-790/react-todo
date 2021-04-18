@@ -146,9 +146,16 @@ const QuestionaireTool = () => {
 
         {answerType === "Multiple Choice" && (
           <div>
-              <div className="w-full">
-                  <input type="text" className="w-full outline-none border-b"/>
+            {options.map((option, optionId) => (
+              <div className="w-full flex" key={optionId}>
+                <span className="mr-4 font-bold text-lg">{optionId + 1}</span>
+                <input
+                  type="text"
+                  value={option}
+                  className="w-full outline-none bg-transparent border-b"
+                />
               </div>
+            ))}
           </div>
         )}
       </div>
