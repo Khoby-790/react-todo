@@ -357,7 +357,7 @@ const QuestionaireTool = () => {
         </div>
       </div>
 
-      <div className="p-3 bg-white shadow-lg w-2/3"></div>
+      <div className="p-3 bg-white shadow-lg w-1/3"></div>
     </Fragment>
   );
 };
