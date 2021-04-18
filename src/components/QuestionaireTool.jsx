@@ -18,12 +18,15 @@ function classNames(...classes) {
 
 const QuestionaireTool = () => {
   return (
-    <div className="w-full lg:w-2/3 border-l-8 border-indigo-500 py-2 my-3 rounded-lg">
+    <div className="w-full lg:w-2/3 border-l-8 border-indigo-500 py-2 shadow-lg my-3 rounded-lg">
+      {/* Question and Question Type section */}
       <div className="flex px-4">
         <div className="flex-1">
-            <textarea name="" id="" className="w-full outline-none focus:bg-gray-300 focus:border-indigo-500 border-b-4">
-
-            </textarea>
+          <textarea
+            name=""
+            id=""
+            className="w-full outline-none focus:bg-gray-300 py-3 px-3 focus:border-indigo-500 border-b-4"
+          ></textarea>
         </div>
         <div className="ml-2">
           <Menu as="div" className="relative inline-block text-left">
@@ -201,6 +204,8 @@ const QuestionaireTool = () => {
           </Menu>
         </div>
       </div>
+      {/* Answers Section */}
+      <div className="p-3"></div>
     </div>
   );
 };
