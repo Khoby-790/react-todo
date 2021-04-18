@@ -9,10 +9,10 @@ const Welcome = () => {
           <div className="flex items-center">
             <button className="outline-none focus:outline-none transition-all duration-100 transform rounded border border-gray-500 px-3 py-2 hover:bg-gray-600 hover:text-white">Temlate gallery</button>
 
-            <button className="ml-4 px-3 py-2 rounded-full outline-none  hover:bg-gray-500 focus:bg-gray-500">
+            <button className="transition-all duration-100 transform ml-4 px-3 py-2 group rounded outline-none hover:text-white hover:bg-gray-500 focus:bg-gray-500">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 text-gray-500 w-6"
+                className="h-6 text-gray-500 group-hover:text-gray-100 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
