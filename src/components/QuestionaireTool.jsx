@@ -18,14 +18,15 @@ function classNames(...classes) {
 
 const QuestionaireTool = () => {
   return (
-    <div className="w-full lg:w-2/3 border-l-8 border-indigo-500 py-2 shadow-lg my-3 rounded-lg">
+    <div className="w-full lg:w-2/3 border-l-8 border-indigo-500 py-2 shadow-lg bg-gray-50 my-3 rounded-lg">
       {/* Question and Question Type section */}
       <div className="flex px-4">
         <div className="flex-1">
           <textarea
             name=""
             id=""
-            className="w-full outline-none focus:bg-gray-300 py-3 px-3 focus:border-indigo-500 border-b-4"
+            placeholder="Question"
+            className="w-full outline-none focus:bg-gray-300 placeholder-gray-500 text-xl py-3 px-3 focus:border-indigo-500 border-b-4"
           ></textarea>
         </div>
         <div className="ml-2">
