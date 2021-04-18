@@ -152,8 +152,9 @@ const QuestionaireTool = () => {
                 <input
                   type="text"
                   value={option}
-                  className="w-full outline-none bg-transparent border-b"
+                  className="w-full py-2 outline-none bg-transparent border-b"
                 />
+                <span className="text-red-600">Remove</span>
               </div>
             ))}
             <button onClick={() => setOptions(prev => [...prev, `Option ${options.length + 1}`])} className="my-3 px-4 py-2 rounded-md w-auto outline-none focus:outline-none bg-indigo-600 text-white">Add option</button>
