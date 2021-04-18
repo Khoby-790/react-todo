@@ -12,7 +12,7 @@ const Navbar = () => {
         <span className="text-xl">Form Builder</span>
       </div>
       <div className="flex-1">
-        <div className="bg-gray-300 group transition-all duration-200 transform hover:scale-50 focus:scale-50 focus:bg-white focus:shadow-lg hover:bg-white hover:shadow-lg w-full flex  py-2 px-4  rounded-lg overflow-hidden">
+        <div className="bg-gray-300 group transition-all duration-200 transform hover:scale-125 focus:scale-125 focus:bg-white focus:shadow-lg hover:bg-white hover:shadow-lg w-full flex  py-2 px-4  rounded-lg overflow-hidden">
           <div>
             <BsSearch className="text-gray-500" size={30} />
           </div>
