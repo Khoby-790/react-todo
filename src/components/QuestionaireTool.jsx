@@ -209,7 +209,14 @@ const QuestionaireTool = () => {
         </div>
       </div>
       {/* Description Section */}
-
+      {showDescription && (
+        <input
+          rows={4}
+          type="text"
+          placeholder="Form Description"
+          className="text-gray-500 w-full px-3 outline-none py-2"
+        />
+      )}
       {/* Answers Section */}
       <div className="p-3"></div>
 
@@ -300,7 +307,7 @@ const QuestionaireTool = () => {
                         {({ active }) => (
                           <a
                             href="#"
-                            onClick={() => showDescription(true)}
+                            onClick={() => setShowDescription(true)}
                             className={classNames(
                               active
                                 ? "bg-gray-100 text-gray-900"
