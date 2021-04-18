@@ -156,7 +156,7 @@ const QuestionaireTool = () => {
                 />
               </div>
             ))}
-            <button className="my-3 px-4 py-2 rounded-md w-auto bg-indigo-600 text-white">Add option</button>
+            <button className="my-3 px-4 py-2 rounded-md w-auto outline-none bg-indigo-600 text-white">Add option</button>
           </div>
         )}
       </div>
