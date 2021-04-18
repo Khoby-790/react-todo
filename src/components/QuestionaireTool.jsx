@@ -16,7 +16,8 @@ function classNames(...classes) {
 const QuestionaireTool = () => {
   const [enabled, setEnabled] = useState(false);
   const [showDescription, setShowDescription] = useState(false);
-  const [answerType, setAnswerType] = useState("Multiple Choice ");
+  const [answerType, setAnswerType] = useState("Multiple Choice");
+  const [options, setOptions] = useState(["Option 1"]);
   return (
     <div className="w-full lg:w-2/3 border-l-8 border-indigo-500 pt-5 px-2 shadow-lg bg-gray-50 my-3 rounded-lg ">
       {/* Question and Question Type section */}
@@ -140,6 +141,10 @@ const QuestionaireTool = () => {
           <div className="border-b w-full">{answerType}</div>
         )}
         {answerType === "Short answer" && (
+          <div className="border-b">{answerType}</div>
+        )}
+
+        {answerType === "Multiple Choice" && (
           <div className="border-b">{answerType}</div>
         )}
       </div>
