@@ -5,7 +5,7 @@ const Welcome = () => {
     <div className="flex-1 h-full flex flex-col">
       <div className="bg-gray-200 h-64 py-5 flex flex-col px-32">
         <div className="flex justify-between">
-          <span>Start a new form</span>
+          <span className="text-xl font-mono text-gray-500">Start a new form</span>
           <div className="flex items-center">
             <button className="outline-none focus:outline-none transition-all duration-100 transform rounded border border-gray-500 px-3 py-2 hover:bg-gray-600 hover:text-white">Temlate gallery</button>
 
@@ -27,6 +27,11 @@ const Welcome = () => {
             </button>
           </div>
         </div>
+
+        <div className="grid grid-cols-5">
+
+        </div>
+      
       </div>
     </div>
   );
