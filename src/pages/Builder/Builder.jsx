@@ -11,8 +11,8 @@ const Builder = () => {
             placeholder="Form Title"
           />
         </div>
-        <div>
-          <textarea type="text" placeholder="Form Description" className="text-gray-500 w-full px-3 outline-none py-2" />
+        <div className="mx-h-40">
+          <textarea rows={4} type="text" placeholder="Form Description" className="text-gray-500 w-full px-3 outline-none py-2" />
         </div>
       </div>
     </div>
