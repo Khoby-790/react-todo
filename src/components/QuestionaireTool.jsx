@@ -221,7 +221,7 @@ const QuestionaireTool = () => {
       <div className="p-3"></div>
 
       {/* Settings Section */}
-      <div className="border-t flex justify-end border-gray-300">
+      <div className="border-t flex justify-end py-4 px-4 border-gray-300">
         <div className="flex p-2 border-r">
           <svg
             xmlns="http://www.w3.org/2000/svg"
