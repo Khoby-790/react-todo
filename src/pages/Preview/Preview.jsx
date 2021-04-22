@@ -8,7 +8,7 @@ const Preview = () => {
   const { questions } = useBuilder();
   return (
     <StepWizard className="h-screen px-36 py-8 w-screen justify-center items-center bg-green-500">
-      <Header />
+      <Header preview />
       {questions?.map((question, qId) => (
         <Question key={qId} question={question} />
       ))}
