@@ -8,6 +8,7 @@ import {
   PencilAltIcon,
   DotsVerticalIcon,
 } from "@heroicons/react/solid";
+import { useBuilder } from "../pages/Builder/context/BuilderContext";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -20,6 +21,7 @@ const QuestionaireTool = () => {
   const [options, setOptions] = useState(["Option 1"]);
   const [question, setQuestion] = useState("");
   const [description, setDescription] = useState("");
+  const { setQuestions } = useBuilder();
 
   const removeOption = (id) => {
     const _options = [...options];
@@ -32,6 +34,23 @@ const QuestionaireTool = () => {
     const _options = [...options];
     _options[id] = value;
     setOptions(_options);
+  };
+
+  const addQuestion = () => {
+    if (!question) return;
+    if (answerType === "Multiple Choice" && options.length < 1) return;
+    const data = {
+      question,
+      answerType,
+      options,
+      required: enabled,
+    };
+    setQuestion("");
+    setAnswerType("Multiple Choice");
+    setOptions(["Option 1"]);
+    setShowDescription(false);
+    setEnabled(false);
+    setQuestions((prev) => [...prev, data]);
   };
 
   return (
@@ -357,7 +376,16 @@ const QuestionaireTool = () => {
         </div>
       </div>
 
-      <div className="p-3 bg-white shadow-lg w-1/3"></div>
+      <div className="p-3 bg-white shadow-lg w-1/3">
+        <div className="">
+          <button
+            onClick={addQuestion}
+            className="bg-green-500 outline-none p-3 rounded text-white font-bold focus:outline-none"
+          >
+            Next Question
+          </button>
+        </div>
+      </div>
     </Fragment>
   );
 };
