@@ -7,12 +7,14 @@ import Header from "../Builder/Header";
 const Preview = () => {
   const { questions } = useBuilder();
   return (
-    <StepWizard className="h-screen px-36 py-8 w-screen justify-center items-center bg-green-500">
+    <div className="h-screen px-36 py-8 w-screen justify-center items-center bg-green-500">
       <Header preview />
-      {questions?.map((question, qId) => (
-        <Question key={qId} question={question} />
-      ))}
-    </StepWizard>
+      <StepWizard>
+        {questions?.map((question, qId) => (
+          <Question key={qId} question={question} />
+        ))}
+      </StepWizard>
+    </div>
   );
 };
 
