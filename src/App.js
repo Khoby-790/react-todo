@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter >
       <div className="h-screen overflow-hidden">
         <Navbar />
-        <div className="h-full max-h-full flex-1 overflow-hidden">
+        <div className="h-full max-h-full bg-gray-200 flex-1 overflow-y-hidden">
           <Route path="/" exact component={Welcome} />
           <Route path="/builder" exact component={Builder} />
         </div>

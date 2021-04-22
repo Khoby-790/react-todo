@@ -10,17 +10,17 @@ const Builder = () => {
   return (
     <div className="flex flex-col max-h-full h-full flex-1 py-5">
       <div className="flex">
-        <div className="flex-1 px-2 h-full">
+        <div className="flex-1 px-2 h-full z-10">
           <QuestionaireTool />
         </div>
-        <form className="flex-1 max-h-full h-full w-full px-2">
+        <div className="flex-1 max-h-full h-full w-full px-2">
           <Header />
-          <StepWizard className="flex items-start w-full bg-green-500 flex-col">
+          <StepWizard className="flex max-h-full w-full flex-col">
             {questions.map((question, questionId) => (
               <Question key={questionId} question={question} />
             ))}
           </StepWizard>
-        </form>
+        </div>
       </div>
     </div>
   );
