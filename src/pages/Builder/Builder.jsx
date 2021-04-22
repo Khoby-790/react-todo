@@ -3,6 +3,7 @@ import { QuestionaireTool } from "../../components";
 import Question from "../../components/Question";
 import { useBuilder } from "./context/BuilderContext";
 import Header from "./Header";
+import StepWizard from "react-step-wizard";
 
 const Builder = () => {
   const { questions } = useBuilder();
@@ -12,13 +13,13 @@ const Builder = () => {
         <div className="flex-1 px-2 h-full">
           <QuestionaireTool />
         </div>
-        <form className="flex-1 max-h-full h-full px-2">
+        <form className="flex-1 max-h-full h-full w-full px-2">
           <Header />
-          <div className="flex items-start w-full flex-col">
+          <StepWizard className="flex items-start w-full bg-green-500 flex-col">
             {questions.map((question, questionId) => (
               <Question key={questionId} question={question} />
             ))}
-          </div>
+          </StepWizard>
         </form>
       </div>
     </div>
