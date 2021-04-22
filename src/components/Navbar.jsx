@@ -1,9 +1,11 @@
 import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BsSearch } from "react-icons/bs";
+import { useLocation } from "react-router";
 
 const Navbar = () => {
-  return (
+  const { pathname } = useLocation();
+  return pathname !== "/preview" ? (
     <div className="bg-white py-5 flex justify-between items-center shadow-md">
       <div className="w-1/4 flex px-4">
         <span className="mr-5">
@@ -24,7 +26,7 @@ const Navbar = () => {
       </div>
       <div className="w-1/4"></div>
     </div>
-  );
+  ) : null;
 };
 
 export default Navbar;
