@@ -26,8 +26,14 @@ const Navbar = () => {
           </div>
         </div>
       )}
-      <div className="w-1/4 flex justify-end pr-4">
-        {pathname === "/builder" && <div>preview</div>}
+      <div className="w-1/4 ">
+        {pathname === "/builder" && (
+          <div className="flex justify-end pr-4 w-full">
+            <button className="bg-gray-100 px-4 rounded outline-none focus:ring-offset-purple-500 py-2 hover:bg-gray-300 transition-all duration-200">
+              preview
+            </button>
+          </div>
+        )}
       </div>
     </div>
   ) : null;
