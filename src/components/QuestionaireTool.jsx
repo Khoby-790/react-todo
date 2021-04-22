@@ -55,7 +55,7 @@ const QuestionaireTool = () => {
 
   return (
     <Fragment>
-      <div className="w-full lg:w-2/3 border-l-8 border-indigo-500 pt-5 px-2 shadow-lg bg-gray-50 my-3 rounded-lg ">
+      <div className="w-full lg:w-full border-l-8 border-indigo-500 pt-5 px-2 shadow-lg bg-gray-50 my-3 rounded-lg ">
         {/* Question and Question Type section */}
         <div className="flex">
           <div className="flex-1">

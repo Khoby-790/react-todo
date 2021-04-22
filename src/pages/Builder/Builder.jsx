@@ -7,14 +7,20 @@ import Header from "./Header";
 const Builder = () => {
   const { questions } = useBuilder();
   return (
-    <div className="flex flex-col items-center py-5">
-      <Header />
-      <div className="flex items-start w-2/3 flex-col">
-        {questions.map((question, questionId) => (
-          <Question key={questionId} question={question} />
-        ))}
+    <div className="flex flex-col max-h-full h-full flex-1 py-5">
+      <div className="flex">
+        <div className="flex-1 px-2 h-full">
+          {/* <QuestionaireTool /> */}
+        </div>
+        <div className="flex-1 max-h-full h-full px-2">
+          <Header />
+          <div className="flex items-start w-full flex-col">
+            {questions.map((question, questionId) => (
+              <Question key={questionId} question={question} />
+            ))}
+          </div>
+        </div>
       </div>
-      <QuestionaireTool />
     </div>
   );
 };

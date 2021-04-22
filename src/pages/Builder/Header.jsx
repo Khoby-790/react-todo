@@ -4,7 +4,7 @@ import { useBuilder } from "./context/BuilderContext";
 const Header = () => {
   const { header, setHeader } = useBuilder();
   return (
-    <div className="bg-white px-4 flex flex-col shadow rounded border-t-8 border-indigo-700 py-3 w-2/3">
+    <div className="bg-white px-4 flex flex-col shadow rounded border-t-8 border-indigo-700 py-3 w-full">
       <div className="flex-1">
         <input
           type="text"
