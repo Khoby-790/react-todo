@@ -6,7 +6,7 @@ const Header = ({ preview }) => {
   return (
     <div className="bg-white px-4 flex flex-col shadow rounded border-t-8 border-indigo-700 py-3 w-full">
       <div className="flex-1">
-        {preview && <h1>{header?.title}</h1>}
+        {preview && <h1 className="text-3xl font-bold">{header?.title}</h1>}
         {!preview && (
           <input
             type="text"
@@ -23,7 +23,7 @@ const Header = ({ preview }) => {
         )}
       </div>
       <div className="mx-h-40">
-        {preview && <p>{header?.description}</p>}
+        {preview && <p className="text-gray-500">{header?.description}</p>}
         {!preview && (
           <textarea
             rows={4}
