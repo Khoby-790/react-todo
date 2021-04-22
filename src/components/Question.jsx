@@ -23,6 +23,7 @@ const Question = ({
     <div className="bg-white shadow-md w-full max-h-full flex-1 py-8 px-5 my-2 rounded">
       <div className="h-96">
         <h1 className="text-2xl font-medium font-mono">{question?.question}</h1>
+        <p className="text-gray-400">{question?.description}</p>
         {question?.answerType === "Multiple Choice" && (
           <ul>
             {question?.options?.map((ans, ansId) => (
