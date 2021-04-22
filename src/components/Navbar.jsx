@@ -2,6 +2,7 @@ import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BsSearch } from "react-icons/bs";
 import { useLocation } from "react-router";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { pathname } = useLocation();
@@ -29,9 +30,12 @@ const Navbar = () => {
       <div className="w-1/4 ">
         {pathname === "/builder" && (
           <div className="flex justify-end pr-4 w-full">
-            <button className="bg-gray-100 px-4 rounded outline-none focus:ring-offset-purple-500 py-2 hover:bg-gray-300 transition-all duration-200">
+            <Link
+              to="/preview"
+              className="bg-gray-100 px-4 rounded outline-none focus:outline-none py-2 hover:bg-gray-300 transition-all duration-200"
+            >
               preview
-            </button>
+            </Link>
           </div>
         )}
       </div>
